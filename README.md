@@ -11,14 +11,14 @@ To use this script:
 		<ol>
 			<li>Run "activate_ubuntu.bat" as Administrator to activate Linux distro emulation on Win10</li>
 			<li>Reboot PC</li>
-			<li>Install Ubuntu (or any other distro) from Microsoft Store</li>
+			<li>Install Ubuntu (or any other distro that uses <b>apt</b> package manager) from Microsoft Store</li>
 			<li>After launching app, update Linux system using: "sudo apt-get update && sudo apt-get upgrade"</li>
 			<li>Make sure that install.sh have executable permissions (chmod +x install.sh)</li>
 			<li>Launch script "./install.sh" to install required software</li>
 			<li>Finish!</li>
 		</ol>
 	</li>
-	<li><b>Linux</b>:
+	<li><b>Ubuntu</b>:
 		<ol>
 			<li>Update system using: "sudo apt-get update && sudo apt-get upgrade"</li>
 			<li>Make sure that install.sh have executable permissions (chmod +x install.sh)</li>
