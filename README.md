@@ -1,5 +1,5 @@
 # ev3dev-compile
-Script that allows you with ease compile programs for EV3DEV in C++
+Script that allows you with ease compile programs for EV3DEV in C++ <i>(using cross-compilling for ARM)</i>
 
 Author: Majroch - Jakub Majrowski
 
