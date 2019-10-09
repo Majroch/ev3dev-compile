@@ -5,7 +5,7 @@
 # Don't touch it, if you don't know what to do with it :P
 #
 #----------------------------
-CXX = arm-linux-gnueabi-g++
+CXX = @cxx_comp@
 CXXFLAGS_IMPORTANT = -Wall -static -static-libgcc -pthread
 RM = rm -rf
 PREFIX = /usr/bin
@@ -45,6 +45,3 @@ ev3dev.o:
 
 clean:
 	$(RM) main.o $(PROGRAM_NAME) $(PROGRAM_BUILD_DIR)
-
-install:
-	cp $(PROGRAM_NAME) $(PREFIX)/$(PROGRAM_NAME)

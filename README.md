@@ -28,7 +28,13 @@ To use this script:
 	</li>
 </ul>
 
-This automated script compiles <b>main.cpp</b> with ev3dev library.<br />
+First configuration:
+<ul>
+	<li>Run <b>autoconf</b> first to generate script checking for requirements</li>
+	<li>Then <b>./configure</b> to execute that script</li>
+	<li>And at last check if all is working just compilling with: <b>make</b></li>
+</ul>
+
 Output file is <b>main</b> <i>(for ARM-based devices including RaspberryPI)</i>.
 
 To compile program main.cpp, run:
@@ -36,10 +42,6 @@ To compile program main.cpp, run:
 
 If you need to clean this folder from compiled files, run:
 	<b>make clean</b>
-
-Of if you want to install this software to your existing system (not recomended), run:
-	<b>sudo make install</b>
-
 
 After finished compiling, upload <b>main</b> program to your brick
 
