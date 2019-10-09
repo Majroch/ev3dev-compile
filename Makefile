@@ -34,8 +34,8 @@ CXXLIBS =
 #----------------------------
 
 all: build ev3dev.o
-	$(CXX) $(CXXFLAGS_IMPORTANT) -c main.cpp -o main.o $(CXXFLAGS) $(CXXLIBS)
-	$(CXX) $(CXXFLAGS_IMPORTANT) $(PROGRAM_BUILD_DIR)/ev3dev.o main.o -o $(PROGRAM_NAME) $(CXXFLAGS) $(CXXLIBS)
+	$(CXX) $(CXXFLAGS_IMPORTANT) -c main.cpp -o $(PROGRAM_BUILD_DIR)/main.o $(CXXFLAGS) $(CXXLIBS)
+	$(CXX) $(CXXFLAGS_IMPORTANT) $(PROGRAM_BUILD_DIR)/ev3dev.o $(PROGRAM_BUILD_DIR)/main.o -o $(PROGRAM_NAME) $(CXXFLAGS) $(CXXLIBS)
 
 build:
 	mkdir build/
