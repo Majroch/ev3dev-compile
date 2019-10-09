@@ -10,6 +10,7 @@ CXXFLAGS_IMPORTANT = -Wall -static -static-libgcc -pthread
 RM = rm -rf
 PREFIX = /usr/bin
 PROGRAM_NAME = main
+PROGRAM_BUILD_DIR = build
 
 
 #----------------------------
@@ -32,15 +33,18 @@ CXXLIBS =
 #
 #----------------------------
 
-all: ev3dev.o
+all: build ev3dev.o
 	$(CXX) $(CXXFLAGS_IMPORTANT) -c main.cpp -o main.o $(CXXFLAGS) $(CXXLIBS)
-	$(CXX) $(CXXFLAGS_IMPORTANT) ev3dev.o main.o -o $(PROGRAM_NAME) $(CXXFLAGS) $(CXXLIBS)
+	$(CXX) $(CXXFLAGS_IMPORTANT) $(PROGRAM_BUILD_DIR)/ev3dev.o main.o -o $(PROGRAM_NAME) $(CXXFLAGS) $(CXXLIBS)
+
+build:
+	mkdir build/
 
 ev3dev.o:
-	$(CXX) $(CXXFLAGS_IMPORTANT) -c ev3dev.cpp -o ev3dev.o $(CXXFLAGS) $(CXXLIBS)
+	$(CXX) $(CXXFLAGS_IMPORTANT) -c ev3dev/ev3dev.cpp -o $(PROGRAM_BUILD_DIR)/ev3dev.o $(CXXFLAGS) $(CXXLIBS)
 
 clean:
-	$(RM) ev3dev.o main.o $(PROGRAM_NAME)
+	$(RM) main.o $(PROGRAM_NAME) $(PROGRAM_BUILD_DIR)
 
 install:
 	cp $(PROGRAM_NAME) $(PREFIX)/$(PROGRAM_NAME)
